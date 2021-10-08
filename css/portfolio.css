@@ -1,7 +1,19 @@
 /***** GENERAL STYLING *****/
 /* Body */
 body {
-    margin: 0%
+    margin: 0% /*This ensures our site displays all the way to the edge of the browser screen */
+    opacity: 1; /*This and transition affect the page loading fade in effect */
+    transition: 3s opacity; /* this causes a 3 second fade in */
+    letter-spacing: .2vw; /* vw is a relative measurement, 1vw = 1% of the viewport width */
+    font-family: Avant Garde, Helvetica; 
+    font-size: 1.5vw;
+    overflow-x: hidden; /* This prevents the horizontal scroll bar from appearing when the quote is hovered over */
+    user-select: none; /* This prevents the text on the webpage from being highlighted by the user */
+}
+
+/* this section contributes to the fade effect for the page that occurs when the page is loaded */
+body.fade-out {
+    opacity: .1; /*this sets the opacity at the start of page load */
 }
 
 /* Heading 1 elements */
@@ -55,6 +67,8 @@ p:hover {
 /* Anchor elements */
 a {
     color: blue; /* This ensures all links are blue */
+    cursor: pointer; /* this ensures all links change the mouse to a pointer when hovered over or clicked */
+    text-decoration: underline; /*this ensures all links are underlined */
 }
 
 /* Quotation elements */
@@ -69,9 +83,7 @@ img {
     max-width: 100%; /* Ensures all images stay within the width of their container */
     height: 340px; /* Sets the height of all images */
     display: block; /* By specifying block display we can ensure our images are able to be centered */
-    margin-left: auto; /* In combination with "margin-right: auto" this centers all images */
-    margin-right: auto;
-}
+    margin: auto auto auto auto; /*this centers all images */
 
 /* Image element hover effects */
 img:hover {
