@@ -17,7 +17,7 @@ function plusSlides(n) {
 }
 
 function showSlides(n) {
-    var slides = document.getElementByClassName("mySlides"); // this takes all elements with the class name "mySlides" and stores them in the variable array "slides"
+    var slides = document.getElementsByClassName("mySlides"); // this takes all elements with the class name "mySlides" and stores them in the variable array "slides"
     var dots = document.getElementsByClassName("dot"); // this takes all elements with the class name "dot" and stores them in the variable array "dots"
     if (n > slides.length) {slideIndex = 1}; // if n (the number passed to the function) is greater than the length of the array "slides", the slideIndex is set to 1
     if (n < 1) {slideIndex = slides.length};
